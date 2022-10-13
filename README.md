@@ -1,5 +1,5 @@
 # SOFTWARE_ENGINEERING
-## 1st class 10/13
+## 1st class 10/7
 ### HELLO.cpp
 print hello.. 
 
