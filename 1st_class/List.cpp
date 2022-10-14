@@ -1,12 +1,8 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
+#include <vector>
+#include <map>
+#include <cassert>
 using namespace std;
-#define INF ((1ll) << 60)
-#define rep(i, n) for (long long i = 0; i < n; i++)
-#define all(v) v.begin(), v.end()
-typedef long double ld;
-typedef long long ll;
-typedef unsigned long long ull;
 
 template <class T>
 class Node
@@ -67,38 +63,43 @@ public:
             }
         }
     }
-    void debug(){
-        if(ro==false){
-            cout<<"EMPTY"<<endl;
+    void debug()
+    {
+        if (ro == false)
+        {
+            cout << "EMPTY" << endl;
             return;
         }
-        map<Node<T>*,ll> NUM; 
+        map<Node<T> *, int> NUM;
 
-        auto now=root;
-        int i=0;
-        while(true){
-            NUM[now]=i;
+        auto now = root;
+        int i = 0;
+        while (true)
+        {
+            NUM[now] = i;
             i++;
-            if(now->af==false)
-            break;
-            now=now->after;
+            if (now->af == false)
+                break;
+            now = now->after;
         }
-        now=root;
-        while(true){
-            cout<<"Node : "<<NUM[now]<<endl;
-            cout<<"  Key : "<<now->key<<endl;
-            cout<<"  be,af : "<<now->be<<" "<<now->af<<endl;
-            cout<<"  before,after : "<<(now->be?NUM[now->before]:-1)<<" "<<(now->af?NUM[now->after]:-1)<<endl;
-            if(now->af==false)
-            break;
-            now=now->after;
+        now = root;
+        while (true)
+        {
+            cout << "Node : " << NUM[now] << endl;
+            cout << "  Key : " << now->key << endl;
+            cout << "  be,af : " << now->be << " " << now->af << endl;
+            cout << "  before,after : " << (now->be ? NUM[now->before] : -1) << " " << (now->af ? NUM[now->after] : -1) << endl;
+            if (now->af == false)
+                break;
+            now = now->after;
         }
     }
 
     void print()
     {
-        if(ro==false){
-            cout<<"EMPTY"<<endl;
+        if (ro == false)
+        {
+            cout << "EMPTY" << endl;
             return;
         }
         auto now = root;
@@ -126,8 +127,9 @@ public:
     }
     Node<T> *search_node(T key)
     {
-        if(ro==false){
-            cout<<"EMPTY"<<endl;
+        if (ro == false)
+        {
+            cout << "EMPTY" << endl;
             assert(0);
         }
         auto now = root;
@@ -165,32 +167,39 @@ public:
         if (node == root)
         {
             node->after->be = false;
-            if(node->after==end)en=false;
+            if (node->after == end)
+                en = false;
             root = node->after;
         }
         else if (node == end)
         {
             node->before->af = false;
-            if(node->before==root)en=false;
+            if (node->before == root)
+                en = false;
             end = node->before;
         }
-        Node<T> *left = node->before, *right = node->after;
-        node->after->before = left;
-        node->before->after = right;
-        delete node;
+        else
+        {
+            Node<T> *left = node->before, *right = node->after;
+            node->after->before = left;
+            node->before->after = right;
+        }
     }
 };
 
 int main()
 {
-    List<int>* l=new List<int>();
-    int MAX=10000;
-    for(int i=0;i<MAX;i+=3){
+    List<int> *l = new List<int>();
+    int MAX = 10000;
+    for (int i = 0; i < MAX; i += 3)
+    {
         l->push(i);
     }
     l->print();
-    cout<<endl;cout<<endl;
-    for(int i=0;i<MAX;i+=2){
+    cout << endl;
+    cout << endl;
+    for (int i = 0; i < MAX; i += 2)
+    {
         l->Delete(i);
     }
     l->print();
