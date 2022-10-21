@@ -41,4 +41,7 @@ print all elements in hash.
 sort v,O(N^2)
 
 ### QuickSort(array v,int begin,int end)
-sort v [begin,end]  O(N^2)
+sort v from begin to end  O(N^2)
+
+### CountSort(array v,array res,int MAX_NUM)
+sort v, result in res,set MAX_NUM as max number of v
