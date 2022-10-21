@@ -20,7 +20,7 @@ Delete the node x in list. O(1)
 print all elements in list.
 
 
-## 2nd class 10/7
+## 2nd class 10/14
 ### binary_search.cpp
 search the key between ok and ng
 if the key existed in vector, return true else return false
@@ -35,3 +35,10 @@ return whether the key exist or not.  expected O(1)
 #### print()
 print all elements in hash.
 
+
+## 3rd class  10/21
+### InsertionSort(array v)
+sort v,O(N^2)
+
+### QuickSort(array v,int begin,int end)
+sort v [begin,end]  O(N^2)
