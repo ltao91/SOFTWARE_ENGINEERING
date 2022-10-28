@@ -47,14 +47,16 @@ sort v from begin to end  O(N^2)
 sort v, result in res,set MAX_NUM as max number of v
 
 ## 4th class 10/28
-### Insert(T k)
+### B+tree
+provide some operations
+#### Insert(T k)
 insert k to tree
 
-### Delete(T k)
+#### Delete(T k)
 delete k from tree
 
-### Search(T k)
+#### Search(T k)
 return whether k exists in tree
 
-### Search_Range(T left,T right)
+#### Search_Range(T left,T right)
 return array containing {key : left<=key<=right}
