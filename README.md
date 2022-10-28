@@ -45,3 +45,16 @@ sort v from begin to end  O(N^2)
 
 ### CountSort(array v,array res,int MAX_NUM)
 sort v, result in res,set MAX_NUM as max number of v
+
+## 4th class 10/28
+### Insert(T k)
+insert k to tree
+
+### Delete(T k)
+delete k from tree
+
+### Search(T k)
+return whether k exists in tree
+
+### Search_Range(T left,T right)
+return array containing {key : left<=key<=right}
