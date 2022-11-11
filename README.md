@@ -46,7 +46,7 @@ sort v from begin to end  O(N^2)
 ### CountSort(array v,array res,int MAX_NUM)
 sort v, result in res,set MAX_NUM as max number of v
 
-## 4th class 10/28
+## 4th class 10/28 && 5th class 11/4 && 6th class 11/11
 ### B+tree
 provide some operations
 #### Insert(T k)
