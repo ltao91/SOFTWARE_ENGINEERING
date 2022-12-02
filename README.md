@@ -60,3 +60,10 @@ return whether k exists in tree
 
 #### Search_Range(T left,T right)
 return array containing {key : left<=key<=right}
+
+## 7th class 12/02
+### counter_fetch_and_add.cc && counter_pthread_lock.cc && counter_ttas.cc
+They work correctly. I implemented my_lock_core
+
+### counter_non_lock.cc
+It doesn't take lock so don't work correctly.
