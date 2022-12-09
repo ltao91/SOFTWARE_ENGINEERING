@@ -67,3 +67,17 @@ They work correctly. I implemented my_lock_core
 
 ### counter_non_lock.cc
 It doesn't take lock so don't work correctly.
+
+## 8th class 12/09
+### lock_bptree
+#### try_lock(Node* node)
+try to get lock of node
+
+#### release_lock(Node* node)
+release lock of node
+
+#### get_data(Node* node)
+return data of node using lock. we init the data as "void kun"
+
+#### change_data
+change data of node using lock
