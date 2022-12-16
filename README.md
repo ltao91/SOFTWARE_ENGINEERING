@@ -81,3 +81,7 @@ return data of node using lock. we init the data as "void kun"
 
 #### change_data
 change data of node using lock
+
+## 9th class 12/16
+### main.cpp
+Check the throughput with my Bptree both write,read operations.
