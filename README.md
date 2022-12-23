@@ -85,3 +85,9 @@ change data of node using lock
 ## 9th class 12/16
 ### main.cpp
 Check the throughput with my Bptree both write,read operations.
+
+## 10th class 12/23
+### main.cpp
+Check the throughput with my Bptree / write ops 
+If the key were locked, tx die and retry!
+sleep some ms.
